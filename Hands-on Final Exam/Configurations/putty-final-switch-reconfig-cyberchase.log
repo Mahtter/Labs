@@ -1,0 +1,375 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2025.11.19 09:34:04 =~=~=~=~=~=~=~=~=~=~=~=
+Warning Unauthorized Access Prohibited!
+
+User Access Verification
+
+Password: 
+% Password:  timeout expired!
+Password: 
+% Password:  timeout expired!
+Password: 
+% Password:  timeout expired!
+% Bad passwords
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+S1 con0 is now available
+
+
+
+
+
+Press RETURN to get started.
+
+
+
+
+
+
+
+
+
+
+
+Warning Unauthorized Access Prohibited!
+
+User Access Verification
+
+Password: 
+Password: 
+Password: 
+S1>en
+Password: 
+Password: 
+Password: 
+S1#config t
+Enter configuration commands, one per line.  End with CNTL/Z.
+S1(config)#int vlan1
+S1(config-if)#ip address 10.10.10  1.100 255.255.255.0
+S1(config-if)#no shutdown
+S1(config-if)#w exit
+S1(config)#copu y running-config startup-config
+            ^
+% Invalid input detected at '^' marker.
+
+S1(config)#end
+S1#config ten      
+*Jan  2 00:15:52.510: %SYS-5-CONFIG_I: Configured from console by consoleconfig t        config ten      config ten        
+S1#config t        copy running-config startup-config
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
+S1#show startup-config
+Using 2849 out of 524288 bytes
+!
+! Last configuration change at 00:15:52 UTC Mon Jan 2 2006
+!
+version 15.0
+no service pad
+service timestamps debug datetime msec
+service timestamps log datetime msec
+service password-encryption
+!
+hostname S1
+!
+boot-start-marker
+boot-end-marker
+!
+enable secret 5 $1$JLMs$pVXW.6hkUu3q6boeSBvDf/
+!
+no aaa new-model
+switch 1 provision ws-c2960s-48fps-l
+!
+!
+!
+!
+ --More--         crypto pki trustpoint TP-self-signed-1212056320
+ --More--          enrollment selfsigned
+ --More--          subject-name cn=IOS-Self-Signed-Certificate-1212056320
+ --More--          revocation-check none
+ --More--          rsakeypair TP-self-signed-1212056320
+ --More--         !
+ --More--         !
+ --More--         crypto pki certificate chain TP-self-signed-1212056320
+ --More--          certificate self-signed 01 nvram:IOS-Self-Sig#2.cer
+ --More--         spanning-tree mode pvst
+ --More--         spanning-tree extend system-id
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         vlan internal allocation policy ascending
+ --More--         !
+ --More--         !
+ --More--         ! 
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         interface FastEthernet0
+ --More--          no ip address
+ --More--         !
+ --More--         interface GigabitEthernet1/0/1
+ --More--         !
+ --More--         interface GigabitEthernet1/0/2
+ --More--         !
+ --More--         interface GigabitEthernet1/0/3
+ --More--         !
+ --More--         interface GigabitEthernet1/0/4
+ --More--         !
+ --More--         interface GigabitEthernet1/0/5
+ --More--         !
+ --More--         interface GigabitEthernet1/0/6
+ --More--         !
+ --More--         interface GigabitEthernet1/0/7
+ --More--         !
+ --More--         interface GigabitEthernet1/0/8
+ --More--         !
+ --More--         interface GigabitEthernet1/0/9
+ --More--         !
+ --More--         interface GigabitEthernet1/0/10
+ --More--         !
+ --More--         interface GigabitEthernet1/0/11
+ --More--         !
+ --More--         interface GigabitEthernet1/0/12
+ --More--         !
+ --More--         interface GigabitEthernet1/0/13
+ --More--         !
+ --More--         interface GigabitEthernet1/0/14
+ --More--         !
+ --More--         interface GigabitEthernet1/0/15
+ --More--         !
+ --More--         interface GigabitEthernet1/0/16
+ --More--         !
+ --More--         interface GigabitEthernet1/0/17
+ --More--         !
+ --More--         interface GigabitEthernet1/0/18
+ --More--         !
+ --More--         interface GigabitEthernet1/0/19
+ --More--         !
+ --More--         interface GigabitEthernet1/0/20
+ --More--         !
+ --More--         interface GigabitEthernet1/0/21
+ --More--         !
+ --More--         interface GigabitEthernet1/0/22
+ --More--         !
+ --More--         interface GigabitEthernet1/0/23
+ --More--         !
+ --More--         interface GigabitEthernet1/0/24
+ --More--         !
+ --More--         interface GigabitEthernet1/0/25
+ --More--         !
+ --More--         interface GigabitEthernet1/0/26
+ --More--         !
+ --More--         interface GigabitEthernet1/0/27
+ --More--         !
+ --More--         interface GigabitEthernet1/0/28
+ --More--         !
+ --More--         interface GigabitEthernet1/0/29
+ --More--         !
+ --More--         interface GigabitEthernet1/0/30
+ --More--         !
+ --More--         interface GigabitEthernet1/0/31
+ --More--         !
+ --More--         interface GigabitEthernet1/0/32
+ --More--         !
+ --More--         interface GigabitEthernet1/0/33
+ --More--         !
+ --More--         interface GigabitEthernet1/0/34
+ --More--         !
+ --More--         interface GigabitEthernet1/0/35
+ --More--         !
+ --More--         interface GigabitEthernet1/0/36
+ --More--         !
+ --More--         interface GigabitEthernet1/0/37
+ --More--         !
+ --More--         interface GigabitEthernet1/0/38
+ --More--         !
+ --More--         interface GigabitEthernet1/0/39
+ --More--         !
+ --More--         interface GigabitEthernet1/0/40
+ --More--         !
+ --More--         interface GigabitEthernet1/0/41
+ --More--         !
+ --More--         interface GigabitEthernet1/0/42
+ --More--         !
+ --More--         interface GigabitEthernet1/0/43
+ --More--         !
+ --More--         interface GigabitEthernet1/0/44
+ --More--         !
+ --More--         interface GigabitEthernet1/0/45
+ --More--         !
+ --More--         interface GigabitEthernet1/0/46
+ --More--         !
+ --More--         interface GigabitEthernet1/0/47
+ --More--         !
+ --More--         interface GigabitEthernet1/0/48
+ --More--         !
+ --More--         interface GigabitEthernet1/0/49
+ --More--         !
+ --More--         interface GigabitEthernet1/0/50
+ --More--         !
+ --More--         interface GigabitEthernet1/0/51
+ --More--         !
+ --More--         interface GigabitEthernet1/0/52
+ --More--         !
+ --More--         interface Vlan1
+ --More--          ip address 10.10.1.100 255.255.255.0
+ --More--         !
+ --More--         ip http server
+ --More--         ip http secure-server
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         vstack
+ --More--         banner motd ^CWarning Unauthorized Access Prohibited!^C
+ --More--         !
+ --More--         line con 0
+ --More--          password 7 05080F1C2243
+ --More--          login
+ --More--         line vty 0 4
+ --More--          login
+ --More--         line vty 5 15
+ --More--          login
+ --More--         !
+ --More--         end
+ --More--         
+S1#
+S1#
+S1#
+S1#
+S1#
+S1#
+S1#
+S1#
+S1#
+S1#
+S1#
+S1#
+S1#
+S1#
+S1#
+S1#
+S1#
+S1#
+S1#
+S1#
+S1#
+S1#
+S1#
+S1#
+S1#
+S1#
+S1#
+S1#
+S1#
+S1#
+S1#
+S1#
+S1#
+S1#
+S1#
+S1#
+S1#
+S1#
+S1#
+S1#
+S1#
+S1#
+S1#
+S1#
+S1#
+S1#
+S1#
+S1#
+S1#
+S1#exit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+S1 con0 is now available
+
+
+
+
+
+Press RETURN to get started.
+
+
+
+
+
+
+
+
+

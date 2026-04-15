@@ -1,0 +1,241 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2025.11.19 09:59:24 =~=~=~=~=~=~=~=~=~=~=~=
+
+Router1#
+*Nov 19 15:09:25.059: %SYS-5-CONFIG_I: Configured from console by console
+Router1#exit
+
+
+
+Router1 con0 is now available
+
+
+
+
+
+Press RETURN to get started.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+User Access Verification
+
+Password: 
+Router1>en
+Router1#config t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router1(config)#line console 0
+Router1(config-line)#password letmein
+Router1(config-line)#login
+Router1(config-line)#exit
+Router1(config)#enable secret Sekur1tyur1ty Kur1tyur1ty 
+Router1(config)#service password-ex ncryption
+Router1(config)#banner motd # Unauthorized Access is Strictly Prohibited #
+Router1(config)#int g0/0
+Router1(config-if)#ip address 10.10.1.1.  255.255.255.0
+Router1(config-if)#no shutdown
+Router1(config-if)#
+*Nov 19 15:17:01.187: %LINK-3-UPDOWN: Interface GigabitEthernet0/0, changed state to down
+Router1(config-if)#description Connection to LAN
+Router1(config-if)#end
+Router1#c
+*Nov 19 15:17:24.667: %SYS-5-CONFIG_I: Configured from console by consoleon      
+Router1#config t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router1(config)#int g/1  0/1
+Router1(config-if)#ip address 10.100.1.101 255.255.0.0
+Router1(config-if)#no shutdown
+Router1(config-if)#
+*Nov 19 15:18:57.415: %LINK-3-UPDOWN: Interface GigabitEthernet0/1, changed state to down
+Router1(config-if)#des  cription Connection to WAN
+Router1(config-if)#end
+Router1#c
+*Nov 19 15:19:20.927: %SYS-5-CONFIG_I: Configured from console by consoleopu      
+Router1#shw running config                ow running config        g-config
+Building configuration...
+
+Current configuration : 1341 bytes
+!
+! Last configuration change at 15:19:20 UTC Wed Nov 19 2025
+!
+version 15.4
+service timestamps debug datetime msec
+service timestamps log datetime msec
+service password-encryption
+!
+hostname Router1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+enable secret 5 $1$NzIP$469tjz0vYJISZWWUM/Snf.
+!
+no aaa new-model
+!
+!
+!
+!
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         ip cef
+ --More--         no ipv6 cef
+ --More--         !
+ --More--         multilink bundle-name authenticated
+ --More--         !
+ --More--         !
+ --More--         cts logging verbose
+ --More--         !
+ --More--         !
+ --More--         license udi pid CISCO2911/K9 sn FTX1812ALQG
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         redundancy
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         ! 
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         interface Embedded-Service-Engine0/0
+ --More--          no ip address
+ --More--          shutdown
+ --More--         !
+ --More--         interface GigabitEthernet0/0
+ --More--          description Connection to LAN
+ --More--          ip address 10.10.1.1 255.255.255.0
+ --More--          duplex auto
+ --More--          speed auto
+ --More--         !
+ --More--         interface GigabitEthernet0/1
+ --More--          description Connection to WAN
+ --More--          ip address 10.100.1.101 255.255.0.0
+ --More--          duplex auto
+ --More--          speed auto
+ --More--         !
+ --More--         interface GigabitEthernet0/2
+ --More--          no ip address
+ --More--          shutdown
+ --More--          duplex auto
+ --More--          speed auto
+ --More--         !
+ --More--         ip forward-protocol nd
+ --More--         !
+ --More--         no ip http server
+ --More--         no ip http secure-server
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         control-plane
+ --More--         !
+ --More--         !
+ --More--         banner motd ^C Unauthorized Access is Strictly Prohibited ^C
+ --More--         !
+ --More--         line con 0
+ --More--          password 7 151E0E18092F222A
+ --More--          login
+ --More--         line aux 0
+ --More--         line 2
+ --More--          no activation-character
+ --More--          no exec
+ --More--          transport preferred none
+ --More--          transport output pad telnet rlogin lapb-ta mop udptn v120 ssh
+ --More--          stopbits 1
+ --More--         line vty 0 4
+ --More--          login
+ --More--          transport input none
+ --More--         !
+ --More--         scheduler allocate 20000 1000
+ --More--         !
+ --More--         end
+ --More--         
+Router1#
+Router1#
+Router1#copy running-config startup-config
+Destination filename [startup-config]?
+Building configuration...
+[OK]
+Router1#
+Router1#exit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Router1 con0 is now available
+
+
+
+
+
+Press RETURN to get started.
+
+
+
+
+
+
+
+
+
+
+
+
+

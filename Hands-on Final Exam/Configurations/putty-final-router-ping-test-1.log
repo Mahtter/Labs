@@ -1,0 +1,277 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2025.12.01 10:18:02 =~=~=~=~=~=~=~=~=~=~=~=
+ Unauthorized Access is Strictly Prohibited 
+
+User Access Verification
+
+Password: 
+Router1>en
+Password: 
+Router1#ping 10.1 6.6.6
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 10.6.6.6, timeout is 2 seconds:
+.....
+Success rate is 0 percent (0/5)
+Router1#ping 10.10.5.101
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 10.10.5.101, timeout is 2 seconds:
+.....
+Success rate is 0 percent (0/5)
+Router1#ping 10.10.5.101
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 10.10.5.101, timeout is 2 seconds:
+.....
+Success rate is 0 percent (0/5)
+Router1#show ip ospf neighbors
+                             ^
+% Invalid input detected at '^' marker.
+
+Router1#show ip ospf neighborsneighbors 
+
+Neighbor ID     Pri   State           Dead Time   Address         Interface
+10.5.5.5          1   FULL/DR         00:00:32    10.100.5.101    GigabitEthernet0/1
+Router1#show ip ospf neighborsping 10.10.5.101      
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 10.10.5.101, timeout is 2 seconds:
+.....
+Success rate is 0 percent (0/5)
+Router1#ping 10.10.5.101100.5.101
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 10.100.5.101, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/4 ms
+Router1#ping 10.10.1.1
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 10.10.1.1, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+Router1#pint 10.10.1.102
+           ^
+% Invalid input detected at '^' marker.
+
+Router1#pint 10.10.1.102t 10.10.1.102 gt 10.10.1.102t 10.10.1.102 ~t 10.10.1.102nt 10.10.1.102gt 10.10.1.102t 10.10.1.102 t 10.10.1.102 t 10.10.1.102 t 10.10.1.102 it 10.10.1.102nt 10.10.1.102gt 10.10.1.102~t 10.10.1.102t 10.10.1.102 t 10.10.1.102 
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 10.10.1.102, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 4/12/44 ms
+Router1#ping 10.10.1.102     7.101
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 10.10.7.101, timeout is 2 seconds:
+.....
+Success rate is 0 percent (0/5)
+Router1#ping 10.10.7.1011.102t 10.10.1.102g 10.10.1.1  0.5.101.5.101 show ip ospf neighbors 
+
+Neighbor ID     Pri   State           Dead Time   Address         Interface
+10.5.5.5          1   FULL/DR         00:00:39    10.100.5.101    GigabitEthernet0/1
+Router1#show ip ospf neighborping 10.10.7.101     0.7.101 00.7.10100.7.101.7.101 .7.101 10.7.10100.7.101
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 10.100.7.101, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+Router1#ping 10.100.7.101show ip ospf neighbor
+
+Neighbor ID     Pri   State           Dead Time   Address         Interface
+10.5.5.5          1   FULL/DR         00:00:35    10.100.5.101    GigabitEthernet0/1
+Router1#
+Router1#show ip route
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area 
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       o - ODR, P - periodic downloaded static route, H - NHRP, l - LISP
+       a - application route
+       + - replicated route, % - next hop override
+
+Gateway of last resort is not set
+
+      10.0.0.0/8 is variably subnetted, 6 subnets, 3 masks
+C        10.1.1.1/32 is directly connected, Loopback0
+C        10.10.1.0/24 is directly connected, GigabitEthernet0/0
+L        10.10.1.1/32 is directly connected, GigabitEthernet0/0
+O        10.10.5.0/24 [110/2] via 10.100.5.101, 00:16:49, GigabitEthernet0/1
+C        10.100.0.0/16 is directly connected, GigabitEthernet0/1
+L        10.100.1.101/32 is directly connected, GigabitEthernet0/1
+Router1#
+Router1#show ip protocols
+*** IP Routing is NSF aware ***
+
+Routing Protocol is "application"
+  Sending updates every 0 seconds
+  Invalid after 0 seconds, hold down 0, flushed after 0
+  Outgoing update filter list for all interfaces is not set
+  Incoming update filter list for all interfaces is not set
+  Maximum path: 32
+  Routing for Networks:
+  Routing Information Sources:
+    Gateway         Distance      Last Update
+  Distance: (default is 4)
+
+Routing Protocol is "ospf 1"
+  Outgoing update filter list for all interfaces is not set
+  Incoming update filter list for all interfaces is not set
+  Router ID 10.10.1.1
+  Number of areas in this router is 1. 1 normal 0 stub 0 nssa
+  Maximum path: 4
+  Routing for Networks:
+    10.10.1.0 0.0.0.255 area 0
+    10.100.1.0 0.0.0.255 area 0
+  Routing Information Sources:
+ --More--             Gateway         Distance      Last Update
+ --More--             10.5.5.5             110      00:17:26
+ --More--           Distance: (default is 110)
+ --More--         
+Router1#
+Router1#
+Router1#show ip protocolsroute    ospf neighborping 10.100.7.101    
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 10.100.7.101, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+Router1#arp -a
+          ^
+% Invalid input detected at '^' marker.
+
+Router1#arp -aping 10.100.7.101show ip protocolsroute    ospf neighbor          f
+ Routing Process "ospf 1" with ID 10.10.1.1
+ Start time: 00:00:30.612, Time elapsed: 00:29:04.372
+ Supports only single TOS(TOS0) routes
+ Supports opaque LSA
+ Supports Link-local Signaling (LLS)
+ Supports area transit capability
+ Supports NSSA (compatible with RFC 3101)
+ Event-log enabled, Maximum number of events: 1000, Mode: cyclic
+ Router is not originating router-LSAs with maximum metric
+ Initial SPF schedule delay 5000 msecs
+ Minimum hold time between two consecutive SPFs 10000 msecs
+ Maximum wait time between two consecutive SPFs 10000 msecs
+ Incremental-SPF disabled
+ Minimum LSA interval 5 secs
+ Minimum LSA arrival 1000 msecs
+ LSA group pacing timer 240 secs
+ Interface flood pacing timer 33 msecs
+ Retransmission pacing timer 66 msecs
+ Number of external LSA 0. Checksum Sum 0x000000
+ Number of opaque AS LSA 0. Checksum Sum 0x000000
+ Number of DCbitless external and opaque AS LSA 0
+ Number of DoNotAge external and opaque AS LSA 0
+ Number of areas in this router is 1. 1 normal 0 stub 0 nssa
+ --More--          Number of areas transit capable is 0
+ --More--          External flood list length 0
+ --More--          IETF NSF helper support enabled
+ --More--          Cisco NSF helper support enabled
+ --More--          Reference bandwidth unit is 100 mbps
+ --More--             Area BACKBONE(0)
+ --More--                 Number of interfaces in this area is 2
+ --More--         	Area has no authentication
+ --More--         	SPF algorithm last executed 00:18:42.884 ago
+ --More--         	SPF algorithm executed 3 times
+ --More--         	Area ranges are
+ --More--         	Number of LSA 3. Checksum Sum 0x01CA9E
+ --More--         	Number of opaque link LSA 0. Checksum Sum 0x000000
+ --More--         	Number of DCbitless LSA 0
+ --More--         	Number of indication LSA 0
+ --More--         	Number of DoNotAge LSA 0
+ --More--         	Flood list length 0
+ --More--         
+Router1#
+Router1#
+Router1#
+Router1#
+Router1#ping 10.100.6.101
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 10.100.6.101, timeout is 2 seconds:
+.....
+Success rate is 0 percent (0/5)
+Router1#ping 10.100.6.101
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 10.100.6.101, timeout is 2 seconds:
+.....
+Success rate is 0 percent (0/5)
+Router1#ping 10.100.6.101show ip ospf     arp -a      ping 10.100.7.101arp -a           ping 10.100.7.101        0.1.1
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 10.10.1.1, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/4 ms
+Router1#ping 10.10.1.1 102
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 10.10.1.102, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 4/4/8 ms
+Router1#ping 10.10.1.102   61
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 10.10.1.61, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/88/428 ms
+Router1#ping 10.10.1.61102\      5.1
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 10.10.5.1, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 1/1/1 ms
+Router1#ping 10.10.5.11.61102  0.6.101show ip ospf     arp -a      ping 10.100.7.101show ip protocolsroute    protocolsroute    ospf neighbor
+
+Neighbor ID     Pri   State           Dead Time   Address         Interface
+10.5.5.5          1   FULL/DR         00:00:36    10.100.5.101    GigabitEthernet0/1
+Router1#exit\
+% Bad IP address or host name
+% Unknown command or computer name, or unable to find computer address
+Router1#exit\
+% Bad IP address or host name
+% Unknown command or computer name, or unable to find computer address
+Router1#\exit
+% Bad IP address or host name
+% Unknown command or computer name, or unable to find computer address
+Router1#exit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Router1 con0 is now available
+
+
+
+
+
+Press RETURN to get started.
+
+
+
+
+
+
+
+
+
+
+
+
+

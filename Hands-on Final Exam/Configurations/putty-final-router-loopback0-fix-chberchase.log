@@ -1,0 +1,855 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2025.12.01 09:37:33 =~=~=~=~=~=~=~=~=~=~=~=
+ Unauthorized Access is Strictly Prohibited 
+
+User Access Verification
+
+Password: 
+Router1>en
+Password: 
+Router1#config t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router1(config)#int loopback 0
+Router1(config-if)#ip address 10.10.1.1 255.255.255.255
+% 10.10.1.1 overlaps with GigabitEthernet0/0
+Router1(config-if)#sav   end
+Router1#
+*Dec  1 14:49:22.267: %SYS-5-CONFIG_I: Configured from console by consolecopy running            
+Router1#copu y running-config startup-config
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
+Router1#reload
+Proceed with reload? [confirm]
+
+*Dec  1 14:49:53.407: %SYS-5-RELOAD: Reload requested by console. Reload Reason: Reload Command.
+System Bootstrap, Version 15.0(1r)M16, RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 2012 by cisco Systems, Inc.
+
+Total memory size = 512 MB - On-board = 512 MB, DIMM0 = 0 MB
+CISCO2911/K9 platform with 524288 Kbytes of main memory
+Main memory is configured to 72/-1(On-board/DIMM0) bit mode with ECC enabled
+
+
+Readonly ROMMON initialized
+program load complete, entry point: 0x80803000, size: 0x1b340
+program load complete, entry point: 0x80803000, size: 0x1b340
+
+
+IOS Image Load Test 
+___________________ 
+Digitally Signed Release Software 
+program load complete, entry point: 0x81000000, size: 0x6370d74
+Self decompressing the image : ########################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################### [OK]
+
+Smart Init is enabled
+smart init is sizing iomem
+                 TYPE      MEMORY_REQ
+    Onboard devices &
+         buffer pools      0x0228F000 
+-----------------------------------------------
+               TOTAL:      0x0228F000
+
+Rounded IOMEM up to: 36MB.
+Using 7 percent iomem. [36MB/512MB]
+
+              Restricted Rights Legend
+
+Use, duplication, or disclosure by the Government is
+subject to restrictions as set forth in subparagraph
+(c) of the Commercial Computer Software - Restricted
+Rights clause at FAR sec. 52.227-19 and subparagraph
+(c) (1) (ii) of the Rights in Technical Data and Computer
+Software clause at DFARS sec. 252.227-7013.
+
+           cisco Systems, Inc.
+           170 West Tasman Drive
+           San Jose, California 95134-1706
+
+
+
+Cisco IOS Software, C2900 Software (C2900-UNIVERSALK9-M), Version 15.4(3)M5, RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2016 by Cisco Systems, Inc.
+Compiled Tue 09-Feb-16 03:45 by prod_rel_team
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+Installed image archive
+Cisco CISCO2911/K9 (revision 1.0) with 487424K/36864K bytes of memory.
+Processor board ID FTX1812ALQG
+3 Gigabit Ethernet interfaces
+1 terminal line
+1 Virtual Private Network (VPN) Module
+DRAM configuration is 64 bits wide with parity enabled.
+255K bytes of non-volatile configuration memory.
+250880K bytes of ATA System CompactFlash 0 (Read/Write)
+
+
+
+Press RETURN to get started!
+
+
+*Jan  2 00:00:03.927: %IOS_LICENSE_IMAGE_APPLICATION-6-LICENSE_LEVEL: Module name = c2900 Next reboot level = ipbasek9 and License = ipbasek9
+*Jan  2 00:00:04.111: %IOS_LICENSE_IMAGE_APPLICATION-6-LICENSE_LEVEL: Module name = c2900 Next reboot level = securityk9 and License = securityk9
+*Dec  1 14:51:50.667: c3600_scp_set_dstaddr2_idb(184)add = 80 name is Embedded-Service-Engine0/0
+*Dec  1 14:51:58.203: %CTS-6-ENV_DATA_START_STATE: Environment Data Download in start state
+*Dec  1 14:52:00.927: %PA-3-PA_INIT_FAILED: Performance Agent failed to initialize (Missing Data License)
+*Dec  1 14:52:00.951: %VPN_HW-6-INFO_LOC: Crypto engine: onboard 0  State changed to: Initialized 
+*Dec  1 14:52:00.955: %VPN_HW-6-INFO_LOC: Crypto engine: onboard 0  State changed to: Enabled 
+*Dec  1 14:52:05.259: %LINK-3-UPDOWN: Interface GigabitEthernet0/0, changed state to down
+*Dec  1 14:52:05.259: %LINK-3-UPDOWN: Interface GigabitEthernet0/1, changed state to down
+*Dec  1 14:52:05.259: %LINK-3-UPDOWN: Interface GigabitEthernet0/2, changed state to down
+*Dec  1 14:52:06.343: %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0, changed state to down
+*Dec  1 14:52:06.343: %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/1, changed state to down
+*Dec  1 14:52:06.347: %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/2, changed state to down
+*Dec  1 14:52:07.499: %SYS-5-CONFIG_I: Configured from memory by console
+*Dec  1 14:52:08.535: %LINEPROTO-5-UPDOWN: Line protocol on Interface Loopback0, changed state to up
+*Dec  1 14:52:09.547: %LINK-5-CHANGED: Interface Embedded-Service-Engine0/0, changed state to administratively down
+*Dec  1 14:52:09.547: %LINK-5-CHANGED: Interface GigabitEthernet0/2, changed state to administratively down
+*Dec  1 14:52:10.167: %SYS-5-RESTART: System restarted --
+Cisco IOS Software, C2900 Software (C2900-UNIVERSALK9-M), Version 15.4(3)M5, RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2016 by Cisco Systems, Inc.
+Compiled Tue 09-Feb-16 03:45 by prod_rel_team
+*Dec  1 14:52:10.839: %SYS-6-BOOTTIME: Time taken to reboot after reload =  139 seconds
+*Dec  1 14:52:11.451: %CRYPTO-6-ISAKMP_ON_OFF: ISAKMP is OFF
+*Dec  1 14:52:11.451: %CRYPTO-6-GDOI_ON_OFF: GDOI is OFF
+*Dec  1 14:52:11.451: %CRYPTO-6-ISAKMP_ON_OFF: ISAKMP is OFF
+*Dec  1 14:52:11.451: %CRYPTO-6-GDOI_ON_OFF: GDOI is OFF
+*Dec  1 14:52:11.451: %LINEPROTO-5-UPDOWN: Line protocol on Interface Embedded-Service-Engine0/0, changed state to down Unauthorized Access is Strictly Prohibited 
+
+User Access Verification
+
+Password: 
+Router1>
+Router1>en
+Password: 
+Router1#show running config
+                        ^
+% Invalid input detected at '^' marker.
+
+Router1#show running configconfig -config
+Building configuration...
+
+Current configuration : 1446 bytes
+!
+version 15.4
+service timestamps debug datetime msec
+service timestamps log datetime msec
+service password-encryption
+!
+hostname Router1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+enable secret 5 $1$NzIP$469tjz0vYJISZWWUM/Snf.
+!
+no aaa new-model
+!
+!
+!
+!
+!
+!
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         no ip domain lookup
+ --More--         ip cef
+ --More--         no ipv6 cef
+ --More--         !
+ --More--         multilink bundle-name authenticated
+ --More--         !
+ --More--         !
+ --More--         cts logging verbose
+ --More--         !
+ --More--         !
+ --More--         license udi pid CISCO2911/K9 sn FTX1812ALQG
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         redundancy
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         ! 
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         interface Loopback0
+ --More--          no ip address
+ --More--         !
+ --More--         interface Embedded-Service-Engine0/0
+ --More--          no ip address
+ --More--          shutdown
+ --More--         !
+ --More--         interface GigabitEthernet0/0
+ --More--          description Connection to LAN
+ --More--          ip address 10.10.1.1 255.255.255.0
+ --More--          duplex auto
+ --More--          speed auto
+ --More--         !
+ --More--         interface GigabitEthernet0/1
+ --More--          description Connection to WAN
+ --More--          ip address 10.100.1.101 255.255.0.0
+ --More--          duplex auto
+ --More--          speed auto
+ --More--         !
+ --More--         interface GigabitEthernet0/2
+ --More--          no ip address
+ --More--          shutdown
+ --More--          duplex auto
+ --More--          speed auto
+ --More--         !
+ --More--         router ospf 1
+ --More--          router-id 10.10.1.1
+ --More--          network 10.10.1.0 0.0.0.255 area 0
+ --More--          network 10.100.1.0 0.0.0.255 area 0
+ --More--         !
+ --More--         ip forward-protocol nd
+ --More--         !
+ --More--         no ip http server
+ --More--         no ip http secure-server
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         control-plane
+ --More--         !
+ --More--         !
+ --More--         banner motd ^C Unauthorized Access is Strictly Prohibited ^C
+ --More--         !
+ --More--         line con 0
+ --More--          password 7 151E0E18092F222A
+ --More--          login
+ --More--         line aux 0
+ --More--         line 2
+ --More--          no activation-character
+ --More--          no exec
+ --More--          transport preferred none
+ --More--          transport output pad telnet rlogin lapb-ta mop udptn v120 ssh
+ --More--          stopbits 1
+ --More--         line vty 0 4
+ --More--          login
+ --More--          transport input none
+ --More--         !
+ --More--         scheduler allocate 20000 1000
+ --More--         !
+ --More--         end
+ --More--         
+Router1#
+Router1#
+Router1#config t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router1(config)#int loopback0
+Router1(config-if)#ip address 10.10.1.1 255.255.255.255
+% 10.10.1.1 overlaps with GigabitEthernet0/0
+Router1(config-if)#end
+Router1#
+*Dec  1 15:00:35.583: %SYS-5-CONFIG_I: Configured from console by console
+Router1#copy sun   running-config start- up-config
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
+Router1#
+Router1#reload
+Proceed with reload? [confirm]
+
+*Dec  1 15:01:04.651: %SYS-5-RELOAD: Reload requested by console. Reload Reason: Reload Command.
+System Bootstrap, Version 15.0(1r)M16, RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 2012 by cisco Systems, Inc.
+
+Total memory size = 512 MB - On-board = 512 MB, DIMM0 = 0 MB
+CISCO2911/K9 platform with 524288 Kbytes of main memory
+Main memory is configured to 72/-1(On-board/DIMM0) bit mode with ECC enabled
+
+
+Readonly ROMMON initialized
+program load complete, entry point: 0x80803000, size: 0x1b340
+program load complete, entry point: 0x80803000, size: 0x1b340
+
+
+IOS Image Load Test 
+___________________ 
+Digitally Signed Release Software 
+program load complete, entry point: 0x81000000, size: 0x6370d74
+Self decompressing the image : ########################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################### [OK]
+
+Smart Init is enabled
+smart init is sizing iomem
+                 TYPE      MEMORY_REQ
+    Onboard devices &
+         buffer pools      0x0228F000 
+-----------------------------------------------
+               TOTAL:      0x0228F000
+
+Rounded IOMEM up to: 36MB.
+Using 7 percent iomem. [36MB/512MB]
+
+              Restricted Rights Legend
+
+Use, duplication, or disclosure by the Government is
+subject to restrictions as set forth in subparagraph
+(c) of the Commercial Computer Software - Restricted
+Rights clause at FAR sec. 52.227-19 and subparagraph
+(c) (1) (ii) of the Rights in Technical Data and Computer
+Software clause at DFARS sec. 252.227-7013.
+
+           cisco Systems, Inc.
+           170 West Tasman Drive
+           San Jose, California 95134-1706
+
+
+
+Cisco IOS Software, C2900 Software (C2900-UNIVERSALK9-M), Version 15.4(3)M5, RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2016 by Cisco Systems, Inc.
+Compiled Tue 09-Feb-16 03:45 by prod_rel_team
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+Installed image archive
+Cisco CISCO2911/K9 (revision 1.0) with 487424K/36864K bytes of memory.
+Processor board ID FTX1812ALQG
+3 Gigabit Ethernet interfaces
+1 terminal line
+1 Virtual Private Network (VPN) Module
+DRAM configuration is 64 bits wide with parity enabled.
+255K bytes of non-volatile configuration memory.
+250880K bytes of ATA System CompactFlash 0 (Read/Write)
+
+
+
+Press RETURN to get started!
+
+
+*Jan  2 00:00:03.927: %IOS_LICENSE_IMAGE_APPLICATION-6-LICENSE_LEVEL: Module name = c2900 Next reboot level = ipbasek9 and License = ipbasek9
+*Jan  2 00:00:04.107: %IOS_LICENSE_IMAGE_APPLICATION-6-LICENSE_LEVEL: Module name = c2900 Next reboot level = securityk9 and License = securityk9
+*Dec  1 15:03:01.667: c3600_scp_set_dstaddr2_idb(184)add = 80 name is Embedded-Service-Engine0/0
+*Dec  1 15:03:09.203: %CTS-6-ENV_DATA_START_STATE: Environment Data Download in start state
+*Dec  1 15:03:11.931: %PA-3-PA_INIT_FAILED: Performance Agent failed to initialize (Missing Data License)
+*Dec  1 15:03:11.955: %VPN_HW-6-INFO_LOC: Crypto engine: onboard 0  State changed to: Initialized 
+*Dec  1 15:03:11.959: %VPN_HW-6-INFO_LOC: Crypto engine: onboard 0  State changed to: Enabled 
+*Dec  1 15:03:16.251: %LINK-3-UPDOWN: Interface GigabitEthernet0/0, changed state to down
+*Dec  1 15:03:16.251: %LINK-3-UPDOWN: Interface GigabitEthernet0/1, changed state to down
+*Dec  1 15:03:16.251: %LINK-3-UPDOWN: Interface GigabitEthernet0/2, changed state to down
+*Dec  1 15:03:17.335: %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0, changed state to down
+*Dec  1 15:03:17.335: %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/1, changed state to down
+*Dec  1 15:03:17.339: %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/2, changed state to down
+*Dec  1 15:03:18.491: %SYS-5-CONFIG_I: Configured from memory by console
+*Dec  1 15:03:19.527: %LINEPROTO-5-UPDOWN: Line protocol on Interface Loopback0, changed state to up
+*Dec  1 15:03:20.535: %LINK-5-CHANGED: Interface Embedded-Service-Engine0/0, changed state to administratively down
+*Dec  1 15:03:20.535: %LINK-5-CHANGED: Interface GigabitEthernet0/2, changed state to administratively down
+*Dec  1 15:03:21.159: %SYS-5-RESTART: System restarted --
+Cisco IOS Software, C2900 Software (C2900-UNIVERSALK9-M), Version 15.4(3)M5, RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2016 by Cisco Systems, Inc.
+Compiled Tue 09-Feb-16 03:45 by prod_rel_team
+*Dec  1 15:03:21.831: %SYS-6-BOOTTIME: Time taken to reboot after reload =  139 seconds
+*Dec  1 15:03:22.443: %CRYPTO-6-ISAKMP_ON_OFF: ISAKMP is OFF
+*Dec  1 15:03:22.443: %CRYPTO-6-GDOI_ON_OFF: GDOI is OFF
+*Dec  1 15:03:22.443: %CRYPTO-6-ISAKMP_ON_OFF: ISAKMP is OFF
+*Dec  1 15:03:22.443: %CRYPTO-6-GDOI_ON_OFF: GDOI is OFF
+*Dec  1 15:03:22.443: %LINEPROTO-5-UPDOWN: Line protocol on Interface Embedded-Service-Engine0/0, changed state to down Unauthorized Access is Strictly Prohibited 
+
+User Access Verification
+
+Password: 
+Router1>en
+Password: 
+Router1#show running config
+                        ^
+% Invalid input detected at '^' marker.
+
+Router1#show running configconfig -config
+Building configuration...
+
+Current configuration : 1446 bytes
+!
+version 15.4
+service timestamps debug datetime msec
+service timestamps log datetime msec
+service password-encryption
+!
+hostname Router1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+enable secret 5 $1$NzIP$469tjz0vYJISZWWUM/Snf.
+!
+no aaa new-model
+!
+!
+!
+!
+!
+!
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         no ip domain lookup
+ --More--         ip cef
+ --More--         no ipv6 cef
+ --More--         !
+ --More--         multilink bundle-name authenticated
+ --More--         !
+ --More--         !
+ --More--         cts logging verbose
+ --More--         !
+ --More--         !
+ --More--         license udi pid CISCO2911/K9 sn FTX1812ALQG
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         redundancy
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         ! 
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         interface Loopback0
+ --More--          no ip address
+ --More--         !
+ --More--         interface Embedded-Service-Engine0/0
+ --More--          no ip address
+ --More--          shutdown
+ --More--         !
+ --More--         interface GigabitEthernet0/0
+ --More--          description Connection to LAN
+ --More--          ip address 10.10.1.1 255.255.255.0
+ --More--          duplex auto
+ --More--          speed auto
+ --More--         !
+ --More--         interface GigabitEthernet0/1
+ --More--          description Connection to WAN
+ --More--          ip address 10.100.1.101 255.255.0.0
+ --More--          duplex auto
+ --More--          speed auto
+ --More--         !
+ --More--         interface GigabitEthernet0/2
+ --More--          no ip address
+ --More--          shutdown
+ --More--          duplex auto
+ --More--          speed auto
+ --More--         !
+ --More--         router ospf 1
+ --More--          router-id 10.10.1.1
+ --More--          network 10.10.1.0 0.0.0.255 area 0
+ --More--          network 10.100.1.0 0.0.0.255 area 0
+ --More--         !
+ --More--         ip forward-protocol nd
+ --More--         !
+ --More--         no ip http server
+ --More--         no ip http secure-server
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         control-plane
+ --More--         !
+ --More--         !
+ --More--         banner motd ^C Unauthorized Access is Strictly Prohibited ^C
+ --More--         !
+ --More--         line con 0
+ --More--          password 7 151E0E18092F222A
+ --More--          login
+ --More--         line aux 0
+ --More--         line 2
+ --More--          no activation-character
+ --More--          no exec
+ --More--          transport preferred none
+ --More--          transport output pad telnet rlogin lapb-ta mop udptn v120 ssh
+ --More--          stopbits 1
+ --More--         line vty 0 4
+ --More--          login
+ --More--          transport input none
+ --More--         !
+ --More--         scheduler allocate 20000 1000
+ --More--         !
+ --More--         end
+ --More--         
+Router1#
+Router1#
+Router1#
+Router1#
+Router1#
+Router1#
+Router1#
+Router1#
+Router1#
+Router1#
+Router1#
+Router1#
+Router1#
+Router1#show ip route | include 10.10.1.
+Router1#config t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router1(config)#int loopback0
+Router1(config-if)#ip address 10.1.1.1 255.255.255.255
+Router1(config-if)#end
+Router1#
+*Dec  1 15:12:38.595: %SYS-5-CONFIG_I: Configured from console by consolecopy    
+Router1#coup   opu y running-config startup-config
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
+Router1#reload
+Proceed with reload? [confirm]
+
+*Dec  1 15:13:14.367: %SYS-5-RELOAD: Reload requested by console. Reload Reason: Reload Command.
+System Bootstrap, Version 15.0(1r)M16, RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 2012 by cisco Systems, Inc.
+
+Total memory size = 512 MB - On-board = 512 MB, DIMM0 = 0 MB
+CISCO2911/K9 platform with 524288 Kbytes of main memory
+Main memory is configured to 72/-1(On-board/DIMM0) bit mode with ECC enabled
+
+
+Readonly ROMMON initialized
+program load complete, entry point: 0x80803000, size: 0x1b340
+program load complete, entry point: 0x80803000, size: 0x1b340
+
+
+IOS Image Load Test 
+___________________ 
+Digitally Signed Release Software 
+program load complete, entry point: 0x81000000, size: 0x6370d74
+Self decompressing the image : ########################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################### [OK]
+
+Smart Init is enabled
+smart init is sizing iomem
+                 TYPE      MEMORY_REQ
+    Onboard devices &
+         buffer pools      0x0228F000 
+-----------------------------------------------
+               TOTAL:      0x0228F000
+
+Rounded IOMEM up to: 36MB.
+Using 7 percent iomem. [36MB/512MB]
+
+              Restricted Rights Legend
+
+Use, duplication, or disclosure by the Government is
+subject to restrictions as set forth in subparagraph
+(c) of the Commercial Computer Software - Restricted
+Rights clause at FAR sec. 52.227-19 and subparagraph
+(c) (1) (ii) of the Rights in Technical Data and Computer
+Software clause at DFARS sec. 252.227-7013.
+
+           cisco Systems, Inc.
+           170 West Tasman Drive
+           San Jose, California 95134-1706
+
+
+
+Cisco IOS Software, C2900 Software (C2900-UNIVERSALK9-M), Version 15.4(3)M5, RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2016 by Cisco Systems, Inc.
+Compiled Tue 09-Feb-16 03:45 by prod_rel_team
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+Installed image archive
+Cisco CISCO2911/K9 (revision 1.0) with 487424K/36864K bytes of memory.
+Processor board ID FTX1812ALQG
+3 Gigabit Ethernet interfaces
+1 terminal line
+1 Virtual Private Network (VPN) Module
+DRAM configuration is 64 bits wide with parity enabled.
+255K bytes of non-volatile configuration memory.
+250880K bytes of ATA System CompactFlash 0 (Read/Write)
+
+
+
+Press RETURN to get started!
+
+
+*Jan  2 00:00:03.931: %IOS_LICENSE_IMAGE_APPLICATION-6-LICENSE_LEVEL: Module name = c2900 Next reboot level = ipbasek9 and License = ipbasek9
+*Jan  2 00:00:04.111: %IOS_LICENSE_IMAGE_APPLICATION-6-LICENSE_LEVEL: Module name = c2900 Next reboot level = securityk9 and License = securityk9
+*Dec  1 15:15:11.667: c3600_scp_set_dstaddr2_idb(184)add = 80 name is Embedded-Service-Engine0/0
+*Dec  1 15:15:19.203: %CTS-6-ENV_DATA_START_STATE: Environment Data Download in start state
+*Dec  1 15:15:21.931: %PA-3-PA_INIT_FAILED: Performance Agent failed to initialize (Missing Data License)
+*Dec  1 15:15:21.955: %VPN_HW-6-INFO_LOC: Crypto engine: onboard 0  State changed to: Initialized 
+*Dec  1 15:15:21.959: %VPN_HW-6-INFO_LOC: Crypto engine: onboard 0  State changed to: Enabled 
+*Dec  1 15:15:26.235: %LINK-3-UPDOWN: Interface GigabitEthernet0/0, changed state to down
+*Dec  1 15:15:26.235: %LINK-3-UPDOWN: Interface GigabitEthernet0/1, changed state to down
+*Dec  1 15:15:26.235: %LINK-3-UPDOWN: Interface GigabitEthernet0/2, changed state to down
+*Dec  1 15:15:27.323: %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0, changed state to down
+*Dec  1 15:15:27.327: %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/1, changed state to down
+*Dec  1 15:15:27.327: %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/2, changed state to down
+*Dec  1 15:15:28.479: %SYS-5-CONFIG_I: Configured from memory by console
+*Dec  1 15:15:29.515: %LINEPROTO-5-UPDOWN: Line protocol on Interface Loopback0, changed state to up
+*Dec  1 15:15:30.527: %LINK-5-CHANGED: Interface Embedded-Service-Engine0/0, changed state to administratively down
+*Dec  1 15:15:30.527: %LINK-5-CHANGED: Interface GigabitEthernet0/2, changed state to administratively down
+*Dec  1 15:15:31.147: %SYS-5-RESTART: System restarted --
+Cisco IOS Software, C2900 Software (C2900-UNIVERSALK9-M), Version 15.4(3)M5, RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2016 by Cisco Systems, Inc.
+Compiled Tue 09-Feb-16 03:45 by prod_rel_team
+*Dec  1 15:15:31.819: %SYS-6-BOOTTIME: Time taken to reboot after reload =  139 seconds
+*Dec  1 15:15:32.431: %CRYPTO-6-ISAKMP_ON_OFF: ISAKMP is OFF
+*Dec  1 15:15:32.431: %CRYPTO-6-GDOI_ON_OFF: GDOI is OFF
+*Dec  1 15:15:32.431: %CRYPTO-6-ISAKMP_ON_OFF: ISAKMP is OFF
+*Dec  1 15:15:32.431: %CRYPTO-6-GDOI_ON_OFF: GDOI is OFF
+*Dec  1 15:15:32.431: %LINEPROTO-5-UPDOWN: Line protocol on Interface Embedded-Service-Engine0/0, changed state to down Unauthorized Access is Strictly Prohibited 
+
+User Access Verification
+
+Password: 
+Router1>en
+Password: 
+Router1#show running-config
+Building configuration...
+
+Current configuration : 1468 bytes
+!
+version 15.4
+service timestamps debug datetime msec
+service timestamps log datetime msec
+service password-encryption
+!
+hostname Router1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+enable secret 5 $1$NzIP$469tjz0vYJISZWWUM/Snf.
+!
+no aaa new-model
+!
+!
+!
+!
+!
+!
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         no ip domain lookup
+ --More--         ip cef
+ --More--         no ipv6 cef
+ --More--         !
+ --More--         multilink bundle-name authenticated
+ --More--         !
+ --More--         !
+ --More--         cts logging verbose
+ --More--         !
+ --More--         !
+ --More--         license udi pid CISCO2911/K9 sn FTX1812ALQG
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         redundancy
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         ! 
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         interface Loopback0
+ --More--          ip address 10.1.1.1 255.255.255.255
+ --More--         !
+ --More--         interface Embedded-Service-Engine0/0
+ --More--          no ip address
+ --More--          shutdown
+ --More--         !
+ --More--         interface GigabitEthernet0/0
+ --More--          description Connection to LAN
+ --More--          ip address 10.10.1.1 255.255.255.0
+ --More--          duplex auto
+ --More--          speed auto
+ --More--         !
+ --More--         interface GigabitEthernet0/1
+ --More--          description Connection to WAN
+ --More--          ip address 10.100.1.101 255.255.0.0
+ --More--          duplex auto
+ --More--          speed auto
+ --More--         !
+ --More--         interface GigabitEthernet0/2
+ --More--          no ip address
+ --More--          shutdown
+ --More--          duplex auto
+ --More--          speed auto
+ --More--         !
+ --More--         router ospf 1
+ --More--          router-id 10.10.1.1
+ --More--          network 10.10.1.0 0.0.0.255 area 0
+ --More--          network 10.100.1.0 0.0.0.255 area 0
+ --More--         !
+ --More--         ip forward-protocol nd
+ --More--         !
+ --More--         no ip http server
+ --More--         no ip http secure-server
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         control-plane
+ --More--         !
+ --More--         !
+ --More--         banner motd ^C Unauthorized Access is Strictly Prohibited ^C
+ --More--         !
+ --More--         line con 0
+ --More--          password 7 151E0E18092F222A
+ --More--          login
+ --More--         line aux 0
+ --More--         line 2
+ --More--          no activation-character
+ --More--          no exec
+ --More--          transport preferred none
+ --More--          transport output pad telnet rlogin lapb-ta mop udptn v120 ssh
+ --More--          stopbits 1
+ --More--         line vty 0 4
+ --More--          login
+ --More--          transport input none
+ --More--         !
+ --More--         scheduler allocate 20000 1000
+ --More--         !
+ --More--         end
+ --More--         
+Router1#
+Router1#
+Router1#
+Router1#exit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Router1 con0 is now available
+
+
+
+
+
+Press RETURN to get started.
+
+
+
+
+
+
+

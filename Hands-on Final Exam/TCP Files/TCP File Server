@@ -1,0 +1,81 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <sys/types.h>
+#include <sys/socket.h>
+#include <netinet/in.h>
+#include <unistd.h>
+
+void error(char *msg) {
+    perror(msg);
+    exit(1);
+}
+
+int main(int argc, char *argv[]) {
+    int sockfd, newsockfd, portno;   // CHANGED: added newsockfd for accepted connection
+    char buffer[1024];
+    struct sockaddr_in serv_addr, cli_addr;
+    socklen_t clilen;
+    int n;
+
+    if (argc < 2) {
+        fprintf(stderr, "Usage: %s <port>\n", argv[0]);
+        exit(1);
+    }
+
+    portno = atoi(argv[1]);
+
+    // CHANGED: use SOCK_STREAM for TCP instead of SOCK_DGRAM
+    sockfd = socket(AF_INET, SOCK_STREAM, 0);
+    if (sockfd < 0)
+        error("ERROR opening socket");
+
+    memset(&serv_addr, 0, sizeof(serv_addr));
+    serv_addr.sin_family = AF_INET;
+    serv_addr.sin_addr.s_addr = INADDR_ANY;
+    serv_addr.sin_port = htons(portno);
+
+    if (bind(sockfd, (struct sockaddr *)&serv_addr, sizeof(serv_addr)) < 0)
+        error("ERROR on binding");
+
+    // NEW: listen for incoming connections
+    if (listen(sockfd, 5) < 0)
+        error("ERROR on listen");
+
+    clilen = sizeof(cli_addr);
+
+    printf("TCP server listening on port %d...\n", portno);
+
+    // NEW: accept a single client connection
+    newsockfd = accept(sockfd, (struct sockaddr *)&cli_addr, &clilen);
+    if (newsockfd < 0)
+        error("ERROR on accept");
+
+    FILE *fp = fopen("port_output.txt", "wb");
+    if (!fp) error("ERROR opening file");
+
+    while (1) {
+        // CHANGED: use recv() instead of recvfrom()
+        n = recv(newsockfd, buffer, sizeof(buffer), 0);
+        if (n < 0)
+            error("ERROR receiving data");
+        if (n == 0) {
+            // client closed connection
+            printf("Client disconnected.\n");
+            break;
+        }
+
+        // Stop if client sends "EOF"
+        if (n == 3 && memcmp(buffer, "EOF", 3) == 0) {
+            printf("File transfer complete.\n");
+            break;
+        }
+
+        fwrite(buffer, 1, n, fp);
+    }
+
+    fclose(fp);
+    close(newsockfd);   // CHANGED: close accepted socket
+    close(sockfd);      // still close the listening socket
+    return 0;
+}

@@ -1,0 +1,1056 @@
+=~=~=~=~=~=~=~=~=~=~=~= PuTTY log 2025.11.24 09:27:08 =~=~=~=~=~=~=~=~=~=~=~=
+ Unauthorized Access is Strictly Prohibited 
+
+User Access Verification
+
+Password: 
+Password: 
+Password: 
+% Bad passwords
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Router1 con0 is now available
+
+
+
+
+
+Press RETURN to get started.
+
+ Unauthorized Access is Strictly Prohibited 
+
+User Access Verification
+
+Password: 
+Password: 
+Password: 
+Router1>en
+Password: 
+Router1#cinfig t
+         ^
+% Invalid input detected at '^' marker.
+
+Router1#config t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router1(config)#no ip domain-lookup
+Router1(config)#show ip brief
+                  ^
+% Invalid input detected at '^' marker.
+
+Router1(config)#do show ip bried f
+                            ^
+% Invalid input detected at '^' marker.
+
+Router1(config)#show running-config
+                  ^
+% Invalid input detected at '^' marker.
+
+Router1(config)#exit
+Router1#show 
+*Nov 24 14:39:00.579: %SYS-5-CONFIG_I: Configured from console by consolerunn        
+% Type "show ?" for a list of subcommands
+Router1#show running-s config
+Building configuration...
+
+Current configuration : 1361 bytes
+!
+! Last configuration change at 14:39:00 UTC Mon Nov 24 2025
+!
+version 15.4
+service timestamps debug datetime msec
+service timestamps log datetime msec
+service password-encryption
+!
+hostname Router1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+enable secret 5 $1$NzIP$469tjz0vYJISZWWUM/Snf.
+!
+no aaa new-model
+!
+!
+!
+!
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         no ip domain lookup
+ --More--         ip cef
+ --More--         no ipv6 cef
+ --More--         !
+ --More--         multilink bundle-name authenticated
+ --More--         !
+ --More--         !
+ --More--         cts logging verbose
+ --More--         !
+ --More--         !
+ --More--         license udi pid CISCO2911/K9 sn FTX1812ALQG
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         redundancy
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         ! 
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         interface Embedded-Service-Engine0/0
+ --More--          no ip address
+ --More--          shutdown
+ --More--         !
+ --More--         interface GigabitEthernet0/0
+ --More--          description Connection to LAN
+ --More--          ip address 10.10.1.1 255.255.255.0
+ --More--          duplex auto
+ --More--          speed auto
+ --More--         !
+ --More--         interface GigabitEthernet0/1
+ --More--          description Connection to WAN
+ --More--          ip address 10.100.1.101 255.255.0.0
+ --More--          duplex auto
+ --More--          speed auto
+ --More--         !
+ --More--         interface GigabitEthernet0/2
+ --More--          no ip address
+ --More--          shutdown
+ --More--          duplex auto
+ --More--          speed auto
+ --More--         !
+ --More--         ip forward-protocol nd
+ --More--         !
+ --More--         no ip http server
+ --More--         no ip http secure-server
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         control-plane
+ --More--         !
+ --More--         !
+ --More--         banner motd ^C Unauthorized Access is Strictly Prohibited ^C
+ --More--         !
+ --More--         line con 0
+ --More--          password 7 151E0E18092F222A
+ --More--          login
+ --More--         line aux 0
+ --More--         line 2
+ --More--          no activation-character
+ --More--          no exec
+ --More--          transport preferred none
+ --More--          transport output pad telnet rlogin lapb-ta mop udptn v120 ssh
+ --More--          stopbits 1
+ --More--         line vty 0 4
+ --More--          login
+ --More--          transport input none
+ --More--         !
+ --More--         scheduler allocate 20000 1000
+ --More--         !
+ --More--         end
+ --More--         
+Router1#
+Router1#
+Router1#
+Router1#
+Router1#
+Router1#
+Router1#
+Router1#
+Router1#
+Router1#
+Router1#
+Router1#
+Router1#
+Router1#config t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router1(config)#router ospf 1
+Router1(config-router)#network 10.10.1.1 0.0.0.255 area 0
+Router1(config-router)#network 10.10.1.1 0.0.0.255 area 01.1 0.0.0.255 area 0 1.1 0.0.0.255 area 00.1 0.0.0.255 area 00.1 0.0.0.255 area 0.0.100.1 0.0.0.255 area 0.1~00.1 0.0.0.255 area 000.1 0.0.0.255 area 0 ~00.1 0.0.0.255 area 000.1 0.0.0.255 area 0 00.1 0.0.0.255 area 0 00.1 0.0.0.255 area 0  0.0.0.255 area 0  0.0.0.255 area 0  0.0.0.255 area 0 1 0.0.0.255 area 0. 0.0.0.255 area 01 0.0.0.255 area 00 0.0.0.255 area 01 0.0.0.255 area 0 0.0.0.255 area 0
+Router1(config-router)#end
+Router1#
+*Nov 24 14:49:51.579: %SYS-5-CONFIG_I: Configured from console by consoleso  
+Router1#show ip protocols
+*** IP Routing is NSF aware ***
+
+Routing Protocol is "application"
+  Sending updates every 0 seconds
+  Invalid after 0 seconds, hold down 0, flushed after 0
+  Outgoing update filter list for all interfaces is not set
+  Incoming update filter list for all interfaces is not set
+  Maximum path: 32
+  Routing for Networks:
+  Routing Information Sources:
+    Gateway         Distance      Last Update
+  Distance: (default is 4)
+
+Routing Protocol is "ospf 1"
+  Outgoing update filter list for all interfaces is not set
+  Incoming update filter list for all interfaces is not set
+  Router ID 10.100.1.101
+  Number of areas in this router is 1. 1 normal 0 stub 0 nssa
+  Maximum path: 4
+  Routing for Networks:
+    10.10.1.0 0.0.0.255 area 0
+    10.100.1.0 0.0.0.255 area 0
+  Routing Information Sources:
+ --More--             Gateway         Distance      Last Update
+ --More--           Distance: (default is 110)
+ --More--         
+Router1#show ip ospf
+ Routing Process "ospf 1" with ID 10.100.1.101
+ Start time: 00:19:28.896, Time elapsed: 00:11:16.540
+ Supports only single TOS(TOS0) routes
+ Supports opaque LSA
+ Supports Link-local Signaling (LLS)
+ Supports area transit capability
+ Supports NSSA (compatible with RFC 3101)
+ Event-log enabled, Maximum number of events: 1000, Mode: cyclic
+ Router is not originating router-LSAs with maximum metric
+ Initial SPF schedule delay 5000 msecs
+ Minimum hold time between two consecutive SPFs 10000 msecs
+ Maximum wait time between two consecutive SPFs 10000 msecs
+ Incremental-SPF disabled
+ Minimum LSA interval 5 secs
+ Minimum LSA arrival 1000 msecs
+ LSA group pacing timer 240 secs
+ Interface flood pacing timer 33 msecs
+ Retransmission pacing timer 66 msecs
+ Number of external LSA 0. Checksum Sum 0x000000
+ Number of opaque AS LSA 0. Checksum Sum 0x000000
+ Number of DCbitless external and opaque AS LSA 0
+ Number of DoNotAge external and opaque AS LSA 0
+ Number of areas in this router is 1. 1 normal 0 stub 0 nssa
+ --More--         
+Router1#how ip ospf int
+         ^
+% Invalid input detected at '^' marker.
+
+Router1#how ip ospf intshow ip ospf int
+GigabitEthernet0/1 is down, line protocol is down 
+  Internet Address 10.100.1.101/16, Area 0, Attached via Network Statement
+  Process ID 1, Router ID 10.100.1.101, Network Type BROADCAST, Cost: 1
+  Topology-MTID    Cost    Disabled    Shutdown      Topology Name
+        0           1         no          no            Base
+  Transmit Delay is 1 sec, State DOWN, Priority 1
+  No designated router on this network
+  No backup designated router on this network
+  Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmit 5
+    oob-resync timeout 40
+GigabitEthernet0/0 is down, line protocol is down 
+  Internet Address 10.10.1.1/24, Area 0, Attached via Network Statement
+  Process ID 1, Router ID 10.100.1.101, Network Type BROADCAST, Cost: 1
+  Topology-MTID    Cost    Disabled    Shutdown      Topology Name
+        0           1         no          no            Base
+  Transmit Delay is 1 sec, State DOWN, Priority 1
+  No designated router on this network
+  No backup designated router on this network
+  Timer intervals configured, Hello 10, Dead 40, Wait 40, Retransmit 5
+    oob-resync timeout 40
+Router1#ci onf  ig t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router1(config)#int loopback 0
+Router1(config-if)#i
+*Nov 24 14:52:54.155: %LINEPROTO-5-UPDOWN: Line protocol on Interface Loopback0, changed state to upp address          
+Router1(config-if)#ip address lookup        10.10.1.1.  255.255.255.255
+% 10.10.1.1 overlaps with GigabitEthernet0/0
+Router1(config-if)#end
+Router1#
+*Nov 24 14:56:50.287: %SYS-5-CONFIG_I: Configured from console by console
+Router1#save run        copy running-config startup-config
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
+Router1#reload
+Proceed with reload? [confirm]
+
+*Nov 24 14:57:22.127: %SYS-5-RELOAD: Reload requested by console. Reload Reason: Reload Command.
+System Bootstrap, Version 15.0(1r)M16, RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 2012 by cisco Systems, Inc.
+
+Total memory size = 512 MB - On-board = 512 MB, DIMM0 = 0 MB
+CISCO2911/K9 platform with 524288 Kbytes of main memory
+Main memory is configured to 72/-1(On-board/DIMM0) bit mode with ECC enabled
+
+
+Readonly ROMMON initialized
+program load complete, entry point: 0x80803000, size: 0x1b340
+program load complete, entry point: 0x80803000, size: 0x1b340
+
+
+IOS Image Load Test 
+___________________ 
+Digitally Signed Release Software 
+program load complete, entry point: 0x81000000, size: 0x6370d74
+Self decompressing the image : ########################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################### [OK]
+
+Smart Init is enabled
+smart init is sizing iomem
+                 TYPE      MEMORY_REQ
+    Onboard devices &
+         buffer pools      0x0228F000 
+-----------------------------------------------
+               TOTAL:      0x0228F000
+
+Rounded IOMEM up to: 36MB.
+Using 7 percent iomem. [36MB/512MB]
+
+              Restricted Rights Legend
+
+Use, duplication, or disclosure by the Government is
+subject to restrictions as set forth in subparagraph
+(c) of the Commercial Computer Software - Restricted
+Rights clause at FAR sec. 52.227-19 and subparagraph
+(c) (1) (ii) of the Rights in Technical Data and Computer
+Software clause at DFARS sec. 252.227-7013.
+
+           cisco Systems, Inc.
+           170 West Tasman Drive
+           San Jose, California 95134-1706
+
+
+
+Cisco IOS Software, C2900 Software (C2900-UNIVERSALK9-M), Version 15.4(3)M5, RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2016 by Cisco Systems, Inc.
+Compiled Tue 09-Feb-16 03:45 by prod_rel_team
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+Installed image archive
+Cisco CISCO2911/K9 (revision 1.0) with 487424K/36864K bytes of memory.
+Processor board ID FTX1812ALQG
+3 Gigabit Ethernet interfaces
+1 terminal line
+1 Virtual Private Network (VPN) Module
+DRAM configuration is 64 bits wide with parity enabled.
+255K bytes of non-volatile configuration memory.
+250880K bytes of ATA System CompactFlash 0 (Read/Write)
+
+
+
+Press RETURN to get started!
+
+
+*Jan  2 00:00:03.931: %IOS_LICENSE_IMAGE_APPLICATION-6-LICENSE_LEVEL: Module name = c2900 Next reboot level = ipbasek9 and License = ipbasek9
+*Jan  2 00:00:04.111: %IOS_LICENSE_IMAGE_APPLICATION-6-LICENSE_LEVEL: Module name = c2900 Next reboot level = securityk9 and License = securityk9
+*Nov 24 14:59:19.667: c3600_scp_set_dstaddr2_idb(184)add = 80 name is Embedded-Service-Engine0/0
+*Nov 24 14:59:27.207: %CTS-6-ENV_DATA_START_STATE: Environment Data Download in start state
+*Nov 24 14:59:29.935: %PA-3- Unauthorized Access is Strictly Prohibited 
+
+User Access Verification
+
+Password: PA_INIT_FAILED: Performance Agent failed to initialize (Missing Data License)
+*Nov 24 14:59:29.959: %VPN_HW-6-INFO_LOC: Crypto engine: onboard 0  State changed to: Initialized 
+*Nov 24 14:59:29.963: %VPN_HW-6-INFO_LOC: Crypto engine: onboard 0  State changed to: Enabled 
+*Nov 24 14:59:34.243: %LINK-3-UPDOWN: Interface GigabitEthernet0/0, changed state to down
+*Nov 24 14:59:34.247: %LINK-3-UPDOWN: Interface GigabitEthernet0/1, changed state to down
+*Nov 24 14:59:34.247: %LINK-3-UPDOWN: Interface GigabitEthernet0/2, changed state to down
+*Nov 24 14:59:35.331: %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0, changed state to down
+*Nov 24 14:59:35.335: %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/1, changed state to down
+*Nov 24 14:59:35.335: %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/2, changed state to down
+*Nov 24 14:59:36.487: %SYS-5-CONFIG_I: Configured from memory by console
+*Nov 24 14:59:37.523: %LINEPROTO-5-UPDOWN: Line protocol on Interface Loopback0, changed state to up
+*Nov 24 14:59:38.531: %LINK-5-CHANGED: Interface Embedded-Service-Engine0/0, changed state to administratively down
+*Nov 24 14:59:38.535: %LINK-5-CHANGED: Interface GigabitEthernet0/2, changed state to administratively down
+*Nov 24 14:59:39.155: %SYS-5-RESTART: System restarted --
+Cisco IOS Software, C2900 Software (C2900-UNIVERSALK9-M), Version 15.4(3)M5, RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2016 by Cisco Systems, Inc.
+Compiled Tue 09-Feb-16 03:45 by prod_rel_team
+*Nov 24 14:59:39.827: %SYS-6-BOOTTIME: Time taken to reboot after reload =  139 seconds
+*Nov 24 14:59:40.439: %CRYPTO-6-ISAKMP_ON_OFF: ISAKMP is OFF
+*Nov 24 14:59:40.439: %CRYPTO-6-GDOI_ON_OFF: GDOI is OFF
+*Nov 24 14:59:40.439: %CRYPTO-6-ISAKMP_ON_OFF: ISAKMP is OFF
+*Nov 24 14:59:40.439: %CRYPTO-6-GDOI_ON_OFF: GDOI is OFF
+*Nov 24 14:59:40.439: %LINEPROTO-5-UPDOWN: Line protocol on Interface Embedded-Service-Engine0/0, changed state to down
+% Password:  timeout expired!
+Password: 
+% Password:  timeout expired!
+Password: 
+% Password:  timeout expired!
+% Bad passwords
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Router1 con0 is now available
+
+
+
+
+
+Press RETURN to get started.
+
+ Unauthorized Access is Strictly Prohibited 
+
+User Access Verification
+
+Password: 
+Router1>en
+Password: 
+Router1#show    router      config t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router1(config)#ru outer ospf 1
+Router1(config-router)#router-id 10.10 .1.1     10.1.1
+Router1(config-router)#save    clear ip ospf pros cess
+                        ^
+% Invalid input detected at '^' marker.
+
+Router1(config-router)#end
+Router1#
+*Nov 24 15:08:33.003: %SYS-5-CONFIG_I: Configured from console by consoleconfig ten      
+Router1#enconfig ten      config ten        save running            copy running-config startup-config
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
+Router1#
+Router1#reload
+Proceed with reload? [confirm]
+
+*Nov 24 15:09:16.775: %SYS-5-RELOAD: Reload requested by console. Reload Reason: Reload Command.
+System Bootstrap, Version 15.0(1r)M16, RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 2012 by cisco Systems, Inc.
+
+Total memory size = 512 MB - On-board = 512 MB, DIMM0 = 0 MB
+CISCO2911/K9 platform with 524288 Kbytes of main memory
+Main memory is configured to 72/-1(On-board/DIMM0) bit mode with ECC enabled
+
+
+Readonly ROMMON initialized
+program load complete, entry point: 0x80803000, size: 0x1b340
+program load complete, entry point: 0x80803000, size: 0x1b340
+
+
+IOS Image Load Test 
+___________________ 
+Digitally Signed Release Software 
+program load complete, entry point: 0x81000000, size: 0x6370d74
+Self decompressing the image : ########################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################################### [OK]
+
+Smart Init is enabled
+smart init is sizing iomem
+                 TYPE      MEMORY_REQ
+    Onboard devices &
+         buffer pools      0x0228F000 
+-----------------------------------------------
+               TOTAL:      0x0228F000
+
+Rounded IOMEM up to: 36MB.
+Using 7 percent iomem. [36MB/512MB]
+
+              Restricted Rights Legend
+
+Use, duplication, or disclosure by the Government is
+subject to restrictions as set forth in subparagraph
+(c) of the Commercial Computer Software - Restricted
+Rights clause at FAR sec. 52.227-19 and subparagraph
+(c) (1) (ii) of the Rights in Technical Data and Computer
+Software clause at DFARS sec. 252.227-7013.
+
+           cisco Systems, Inc.
+           170 West Tasman Drive
+           San Jose, California 95134-1706
+
+
+
+Cisco IOS Software, C2900 Software (C2900-UNIVERSALK9-M), Version 15.4(3)M5, RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2016 by Cisco Systems, Inc.
+Compiled Tue 09-Feb-16 03:45 by prod_rel_team
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+Installed image archive
+Cisco CISCO2911/K9 (revision 1.0) with 487424K/36864K bytes of memory.
+Processor board ID FTX1812ALQG
+3 Gigabit Ethernet interfaces
+1 terminal line
+1 Virtual Private Network (VPN) Module
+DRAM configuration is 64 bits wide with parity enabled.
+255K bytes of non-volatile configuration memory.
+250880K bytes of ATA System CompactFlash 0 (Read/Write)
+
+
+
+Press RETURN to get started!
+
+
+*Jan  2 00:00:03.907: %IOS_LICENSE_IMAGE_APPLICATION-6-LICENSE_LEVEL: Module name = c2900 Next reboot level = ipbasek9 and License = ipbasek9
+*Jan  2 00:00:04.091: %IOS_LICENSE_IMAGE_APPLICATION-6-LICENSE_LEVEL: Module name = c2900 Next reboot level = securityk9 and License = securityk9
+*Nov 24 15:11:13.667: c3600_scp_set_dstaddr2_idb(184)add = 80 name is Embedded-Service-Engine0/0
+*Nov 24 15:11:21.203: %CTS-6-ENV_DATA_START_STATE: Environment Data Download in start state
+*Nov 24 15:11:23.927: %PA-3-PA_INIT_FAILED: Performance Agent failed to initialize (Missing Data License)
+*Nov 24 15:11:23.951: %VPN_HW-6-INFO_LOC: Crypto engine: onboard 0  State changed to: Initialized 
+*Nov 24 15:11:23.955: %VPN_HW-6-INFO_LOC: Crypto engine: onboard 0  State changed to: Enabled 
+*Nov 24 15:11:28.247: %LINK-3-UPDOWN: Interface GigabitEthernet0/0, changed state to down
+*Nov 24 15:11:28.247: %LINK-3-UPDOWN: Interface GigabitEthernet0/1, changed state to down
+*Nov 24 15:11:28.247: %LINK-3-UPDOWN: Interface GigabitEthernet0/2, changed state to down
+*Nov 24 15:11:29.331: %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/0, changed state to down
+*Nov 24 15:11:29.331: %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/1, changed state to down
+*Nov 24 15:11:29.335: %LINEPROTO-5-UPDOWN: Line protocol on Interface GigabitEthernet0/2, changed state to down
+*Nov 24 15:11:30.487: %SYS-5-CONFIG_I: Configured from memory by console
+*Nov 24 15:11:31.523: %LINEPROTO-5-UPDOWN: Line protocol on Interface Loopback0, changed state to up
+*Nov 24 15:11:32.535: %LINK-5-CHANGED: Interface Embedded-Service-Engine0/0, changed state to administratively down
+*Nov 24 15:11:32.535: %LINK-5-CHANGED: Interface GigabitEthernet0/2, changed state to administratively down
+*Nov 24 15:11:33.155: %SYS-5-RESTART: System restarted --
+Cisco IOS Software, C2900 Software (C2900-UNIVERSALK9-M), Version 15.4(3)M5, RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2016 by Cisco Systems, Inc.
+Compiled Tue 09-Feb-16 03:45 by prod_rel_team
+*Nov 24 15:11:33.827: %SYS-6-BOOTTIME: Time taken to reboot after reload =  138 seconds
+*Nov 24 15:11:34.439: %CRYPTO-6-ISAKMP_ON_OFF: ISAKMP is OFF
+*Nov 24 15:11:34.439: %CRYPTO-6-GDOI_ON_OFF: GDOI is OFF
+*Nov 24 15:11:34.439: %CRYPTO-6-ISAKMP_ON_OFF: ISAKMP is OFF
+*Nov 24 15:11:34.439: %CRYPTO-6-GDOI_ON_OFF: GDOI is OFF
+*Nov 24 15:11:34.439: %LINEPROTO-5-UPDOWN: Line protocol on Interface Embedded-Service-Engine0/0, changed state to down Unauthorized Access is Strictly Prohibited 
+
+User Access Verification
+
+Password: 
+% Password:  timeout expired!
+Password: 
+% Password:  timeout expired!
+Password: 
+% Password:  timeout expired!
+% Bad passwords
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Router1 con0 is now available
+
+
+
+
+
+Press RETURN to get started.
+
+
+
+
+
+
+
+
+
+
+
+
+ Unauthorized Access is Strictly Prohibited 
+
+User Access Verification
+
+Password: 
+Router1>en
+Password: 
+Router1#clera ar   ar ip ospf process
+Reset ALL OSPF processes? [no]: yes
+Router1#show ip protocols
+*** IP Routing is NSF aware ***
+
+Routing Protocol is "application"
+  Sending updates every 0 seconds
+  Invalid after 0 seconds, hold down 0, flushed after 0
+  Outgoing update filter list for all interfaces is not set
+  Incoming update filter list for all interfaces is not set
+  Maximum path: 32
+  Routing for Networks:
+  Routing Information Sources:
+    Gateway         Distance      Last Update
+  Distance: (default is 4)
+
+Routing Protocol is "ospf 1"
+  Outgoing update filter list for all interfaces is not set
+  Incoming update filter list for all interfaces is not set
+  Router ID 10.10.1.1
+  Number of areas in this router is 1. 1 normal 0 stub 0 nssa
+  Maximum path: 4
+  Routing for Networks:
+    10.10.1.0 0.0.0.255 area 0
+    10.100.1.0 0.0.0.255 area 0
+  Routing Information Sources:
+ --More--             Gateway         Distance      Last Update
+ --More--           Distance: (default is 110)
+ --More--         
+Router1#
+Router1#
+Router1#show ip route
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area 
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       o - ODR, P - periodic downloaded static route, H - NHRP, l - LISP
+       a - application route
+       + - replicated route, % - next hop override
+
+Gateway of last resort is not set
+
+Router1#
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Router1 con0 is now available
+
+
+
+
+
+Press RETURN to get started.
+
+
+
+
+
+
+
+
+
+
+
+ Unauthorized Access is Strictly Prohibited 
+
+User Access Verification
+
+Password: 
+Router1>en
+Password: 
+Router1#show ip protocols
+*** IP Routing is NSF aware ***
+
+Routing Protocol is "application"
+  Sending updates every 0 seconds
+  Invalid after 0 seconds, hold down 0, flushed after 0
+  Outgoing update filter list for all interfaces is not set
+  Incoming update filter list for all interfaces is not set
+  Maximum path: 32
+  Routing for Networks:
+  Routing Information Sources:
+    Gateway         Distance      Last Update
+  Distance: (default is 4)
+
+Routing Protocol is "ospf 1"
+  Outgoing update filter list for all interfaces is not set
+  Incoming update filter list for all interfaces is not set
+  Router ID 10.10.1.1
+  Number of areas in this router is 1. 1 normal 0 stub 0 nssa
+  Maximum path: 4
+  Routing for Networks:
+    10.10.1.0 0.0.0.255 area 0
+    10.100.1.0 0.0.0.255 area 0
+  Routing Information Sources:
+ --More--             Gateway         Distance      Last Update
+ --More--           Distance: (default is 110)
+ --More--         
+Router1#
+Router1#config t
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router1(config)#router ospf 1
+Router1(config-router)#network 10.10.1.1 0.0.0.255 area 0
+Router1(config-router)#network 10.10.1.1 0.0.0.255 area 0 0.0.0.255 area 0  0.0.0.255 area 0  0.0.0.255 area 0  0.0.0.255 area 0  0.0.0.255 area 0 0 0.0.0.255 area 00 0.0.0.255 area 0. 0.0.0.255 area 01 0.0.0.255 area 0. 0.0.0.255 area 01 0.0.0.255 area 00 0.0.0.255 area 01 0.0.0.255 area 0 0.0.0.255 area 0
+Router1(config-router)#end
+Router1#
+*Nov 24 15:43:45.151: %SYS-5-CONFIG_I: Configured from console by consoleip protocols            
+Router1#ip    shoow  w ip protp ocols
+*** IP Routing is NSF aware ***
+
+Routing Protocol is "application"
+  Sending updates every 0 seconds
+  Invalid after 0 seconds, hold down 0, flushed after 0
+  Outgoing update filter list for all interfaces is not set
+  Incoming update filter list for all interfaces is not set
+  Maximum path: 32
+  Routing for Networks:
+  Routing Information Sources:
+    Gateway         Distance      Last Update
+  Distance: (default is 4)
+
+Routing Protocol is "ospf 1"
+  Outgoing update filter list for all interfaces is not set
+  Incoming update filter list for all interfaces is not set
+  Router ID 10.10.1.1
+  Number of areas in this router is 1. 1 normal 0 stub 0 nssa
+  Maximum path: 4
+  Routing for Networks:
+    10.10.1.0 0.0.0.255 area 0
+    10.100.1.0 0.0.0.255 area 0
+  Routing Information Sources:
+ --More--             Gateway         Distance      Last Update
+ --More--           Distance: (default is 110)
+ --More--         
+Router1#
+Router1#
+Router1#show runnin      ip brief
+                 ^
+% Invalid input detected at '^' marker.
+
+Router1#show ip brieff        running config
+                        ^
+% Invalid input detected at '^' marker.
+
+Router1#show running configconfig -config
+Building configuration...
+
+Current configuration : 1508 bytes
+!
+! Last configuration change at 15:43:45 UTC Mon Nov 24 2025
+!
+version 15.4
+service timestamps debug datetime msec
+service timestamps log datetime msec
+service password-encryption
+!
+hostname Router1
+!
+boot-start-marker
+boot-end-marker
+!
+!
+enable secret 5 $1$NzIP$469tjz0vYJISZWWUM/Snf.
+!
+no aaa new-model
+!
+!
+!
+!
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         no ip domain lookup
+ --More--         ip cef
+ --More--         no ipv6 cef
+ --More--         !
+ --More--         multilink bundle-name authenticated
+ --More--         !
+ --More--         !
+ --More--         cts logging verbose
+ --More--         !
+ --More--         !
+ --More--         license udi pid CISCO2911/K9 sn FTX1812ALQG
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         redundancy
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         ! 
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         interface Loopback0
+ --More--          no ip address
+ --More--         !
+ --More--         interface Embedded-Service-Engine0/0
+ --More--          no ip address
+ --More--          shutdown
+ --More--         !
+ --More--         interface GigabitEthernet0/0
+ --More--          description Connection to LAN
+ --More--          ip address 10.10.1.1 255.255.255.0
+ --More--          duplex auto
+ --More--          speed auto
+ --More--         !
+ --More--         interface GigabitEthernet0/1
+ --More--          description Connection to WAN
+ --More--          ip address 10.100.1.101 255.255.0.0
+ --More--          duplex auto
+ --More--          speed auto
+ --More--         !
+ --More--         interface GigabitEthernet0/2
+ --More--          no ip address
+ --More--          shutdown
+ --More--          duplex auto
+ --More--          speed auto
+ --More--         !
+ --More--         router ospf 1
+ --More--          router-id 10.10.1.1
+ --More--          network 10.10.1.0 0.0.0.255 area 0
+ --More--          network 10.100.1.0 0.0.0.255 area 0
+ --More--         !
+ --More--         ip forward-protocol nd
+ --More--         !
+ --More--         no ip http server
+ --More--         no ip http secure-server
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         !
+ --More--         control-plane
+ --More--         !
+ --More--         !
+ --More--         banner motd ^C Unauthorized Access is Strictly Prohibited ^C
+ --More--         !
+ --More--         line con 0
+ --More--          password 7 151E0E18092F222A
+ --More--          login
+ --More--         line aux 0
+ --More--         line 2
+ --More--          no activation-character
+ --More--          no exec
+ --More--          transport preferred none
+ --More--          transport output pad telnet rlogin lapb-ta mop udptn v120 ssh
+ --More--          stopbits 1
+ --More--         line vty 0 4
+ --More--          login
+ --More--          transport input none
+ --More--         !
+ --More--         scheduler allocate 20000 1000
+ --More--         !
+ --More--         end
+ --More--         
+Router1#
+Router1#
+Router1#
+Router1#
+Router1#
+Router1#
+Router1#
+Router1#
+Router1#
+Router1#
+Router1#
+Router1#save      copy  py running  -config startup-config
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
+Router1#exit
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Router1 con0 is now available
+
+
+
+
+
+Press RETURN to get started.
+
+
+
+
+
+
+
+
+
+

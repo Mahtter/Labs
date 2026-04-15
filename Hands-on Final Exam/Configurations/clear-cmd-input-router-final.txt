@@ -1,0 +1,24 @@
+enable
+configure terminal
+hostname Router1
+line console 0
+password letmein
+login
+exit
+enable secret SeKur1ty
+service password-encryption
+banner motd # Unauthorized Access is Prohibited #
+int g0/0
+ip address 10.10.1.1 255.255.255.0
+no shutdown
+description Connection to LAN
+end
+config t
+int g0/1
+ip address 10.100.1.101 255.255.0.0
+no shutdown
+description Connection to WAN
+end
+show running config
+copy running-config startup-config
+exit
